@@ -24,7 +24,7 @@
 }
 
 .formInput:focus {
-  border-color: #007bff;
+  border-color: #c34814;
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
   outline: none;
 }
@@ -32,7 +32,7 @@
 .submitBtn {
   width: 100%;
   padding: 10px 15px;
-  background-color: #70d4dd;
+  background-color: #ff6b6b;
   color: white;
   border: none;
   border-radius: 4px;
@@ -42,5 +42,5 @@
 }
 
 .submitBtn:hover {
-  background-color: #00b3a1;
+  background-color: #d8500c;
 }

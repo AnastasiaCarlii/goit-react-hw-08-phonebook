@@ -1,0 +1,27 @@
+.layoutContainer {
+  max-width: 100%;
+  margin: auto;
+
+  padding: 20px;
+}
+.navList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.navItem a {
+  display: inline-block;
+  min-width: 120px;
+  margin: 0 10px;
+  padding: 10px 15px;
+  background-color: #e8502a;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
