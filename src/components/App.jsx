@@ -1,25 +1,27 @@
-import css from './App.module.css';
-import ContactForm from './ContactForm/ContactForm';
-import { SearchFilter } from './SearchFilter/SearchFilter';
-import { ContactList } from './ContactList/ContactList';
-import { useDispatch } from 'react-redux';
+import { ContactsPage } from 'pages/ContactsPage';
+import HomePage from 'pages/HomePage';
+import { LoginPage } from 'pages/LoginPage';
 import { useEffect } from 'react';
-import { fetchAllContacts } from 'redux/contacts/operations';
+import { useDispatch } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import { refresh } from 'redux/auth/authOperation';
 
 export const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchAllContacts());
+    dispatch(refresh());
   }, [dispatch]);
 
   return (
-    <div className={css.container}>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <h2>Contacts</h2>
-      <SearchFilter />
-      <ContactList />
-    </div>
+    <>
+      <Routes>
+        <Route>
+          <Route index element={<HomePage />} />
+          <Route path="/contacts" element={<ContactsPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 };

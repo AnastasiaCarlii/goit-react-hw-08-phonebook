@@ -1,0 +1,52 @@
+.backgroundImg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.image {
+  width: 80%;
+  max-height: 400px;
+}
+
+.wrapper {
+  position: relative;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  background-color: white;
+}
+.title {
+  max-width: 400px;
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  line-height: 150%;
+  color: #042b2b;
+}
+
+.startLink {
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  min-width: 100px;
+  padding: 10px 20px;
+  background-color: #e8502a;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.startLink :hover,
+.startLink:focus {
+  background: #008050;
+}
