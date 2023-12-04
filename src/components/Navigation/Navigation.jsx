@@ -1,4 +1,5 @@
-import { useAuth } from 'redux/auth/useAuth';
+import { useAuth } from 'hooks/useAuth';
+import { NavLink } from 'react-router-dom';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();

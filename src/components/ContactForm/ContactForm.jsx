@@ -12,9 +12,9 @@ const ContactForm = () => {
   const contacts = useSelector(selectContacts);
   const [data, setData] = useState({
     name: '',
-    phone: '',
+    number: '',
   });
-  const { name, phone } = data;
+  const { name, number } = data;
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -22,18 +22,18 @@ const ContactForm = () => {
       contacts.find(
         contact =>
           contact.name.toLowerCase() === name.toLowerCase() ||
-          contact.phone === phone
+          contact.number === number
       )
     ) {
-      alert(`${name} or ${phone} is already in your contacts`);
-      setData({ name: '', phone: '' });
+      alert(`${name} or ${number} is already in your contacts`);
+      setData({ name: '', number: '' });
       return;
     }
 
     const newContact = { ...data };
 
     dispatch(fetchAddContact(newContact));
-    setData({ name: '', phone: '' });
+    setData({ name: '', number: '' });
   };
 
   const handleChange = e => {
@@ -64,8 +64,8 @@ const ContactForm = () => {
           className={css.formInput}
           autoComplete="on"
           type="text"
-          name="phone"
-          value={phone}
+          name="number"
+          value={number}
           onChange={handleChange}
           required
         />

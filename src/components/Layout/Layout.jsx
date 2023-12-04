@@ -1,19 +1,20 @@
 import Loader from 'components/Loader/Loader';
 import React, { Suspense } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import css from './Layout.module.css';
+import { useAuth } from 'hooks';
+import { Navigation } from 'components/Navigation/Navigation';
+import UserMenu from 'components/UserMenu/UserMenu';
+import AuthNav from 'components/AuthNav/AuthNav';
 
 export const Layout = () => {
+  const { isLoggedIn } = useAuth();
   return (
     <div className={css.layoutContainer}>
-      <ul className={css.navList}>
-        <li className={css.navItem}>
-          <NavLink to={'/register'}> Sign Up</NavLink>
-        </li>
-        <li className={css.navItem}>
-          <NavLink to={'/login'}> Log In </NavLink>
-        </li>
-      </ul>
+      <header>
+        <Navigation />
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      </header>
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>

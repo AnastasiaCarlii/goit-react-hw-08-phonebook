@@ -3,7 +3,7 @@ import {
   selectIsLoggedIn,
   selectIsRefreshing,
   selectUser,
-} from './authSelectors';
+} from '../redux/auth/authSelectors';
 
 export const useAuth = () => {
   const user = useSelector(selectUser);

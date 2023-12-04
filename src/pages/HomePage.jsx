@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div className={css.wrapper}>
       <h1 className={css.title}>Hello! Welcome to contact book</h1>
-      <Link className={css.startLink} to="contacts">
+      <Link className={css.startLink} to="/login">
         Start
       </Link>
       <div className={css.image}>
