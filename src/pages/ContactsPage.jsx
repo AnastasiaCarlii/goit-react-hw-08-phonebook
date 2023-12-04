@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux';
 import { fetchAllContacts } from 'redux/contacts/operations';
 // import css from '../components/App.module.css';
 import css from './ContactsPage.module.css';
-import contacts from '../components/Images/contacts.jpg';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
