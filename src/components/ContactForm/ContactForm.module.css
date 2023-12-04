@@ -1,11 +1,18 @@
 .formContainer {
-  max-width: 800px;
+  width: 400px;
   margin: 0 auto;
   padding: 20px;
   background: #f7f7f7;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* position: relative; */
 }
+/* .formContainer form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
 
 .formContainer label {
   display: block;

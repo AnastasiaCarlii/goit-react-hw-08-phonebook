@@ -11,7 +11,7 @@ export const Layout = () => {
   const { isLoggedIn } = useAuth();
   return (
     <div className={css.layoutContainer}>
-      <header>
+      <header className={css.header}>
         <Navigation />
         {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </header>

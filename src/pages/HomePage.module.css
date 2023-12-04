@@ -34,7 +34,7 @@
   left: 60%;
   min-width: 100px;
   padding: 10px 20px;
-  background-color: #e8502a;
+  background-color: #e16444;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   text-decoration: none;
@@ -48,5 +48,5 @@
 
 .startLink :hover,
 .startLink:focus {
-  background: #008050;
+  background: #ae290f;
 }

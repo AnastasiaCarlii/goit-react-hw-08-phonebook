@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import css from './ContactListItem.module.css';
+import { TiUserDeleteOutline } from 'react-icons/ti';
 
 import { fetchDeleteContact } from 'redux/contacts/operations';
 
@@ -14,7 +15,7 @@ export const ContactListItem = ({ id, name, number }) => {
         {name}:{number}
       </span>
       <button type="button" onClick={onDeleteContact}>
-        Delete
+        <TiUserDeleteOutline size={20} />
       </button>
     </li>
   );
